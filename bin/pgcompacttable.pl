@@ -646,7 +646,7 @@ sub set_session_replication_role {
 sub create_clean_pages_function {
   
   _dbh->do("
-CREATE OR REPLACE FUNCTION public.pgcompact_clean_pages_$$(
+CREATE OR REPLACE FUNCTION public.pgcompact_clean_pages(
     i_table_ident text,
     i_column_ident text,
     i_to_page integer,
